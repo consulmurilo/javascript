@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome e Idade</title>
+    <style>
+        body {
+            font: 1rem Arial;
+        }
+
+        input {
+            width: 100px;
+            font-size: 1rem;
+        }
+
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite seu nome e sua idade</h1>
+    <input type="text" name="nome" id="nome">
+    <input type="number" name="idade" id="idade">
+    <input type="button" value="Resultado" id="soma">
+    <div id="res">Resultado</div>
+    <script>
+        var btnsoma = document.querySelector('#soma')
+        btnsoma.addEventListener('click', somar)
+
+        function somar() {
+            var n = document.querySelector('#nome').value
+            var i = document.querySelector('#idade')
+            var inmr = Number(i.value)
+            var res = document.querySelector('#res')
+
+            res.innerHTML = `Seu nome é ${n} e você tem ${inmr} anos.`
+        }
+    </script>
+</body>
+</html>
